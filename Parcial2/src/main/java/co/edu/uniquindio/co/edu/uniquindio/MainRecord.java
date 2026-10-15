@@ -1,10 +1,10 @@
-package uniquindio.edu.co;
+package co.edu.uniquindio;
 
-import uniquindio.edu.co.model.Cine;
-import uniquindio.edu.co.model.Pelicula;
-import uniquindio.edu.co.model.Sala;
-import uniquindio.edu.co.model.TipoSala;
-import uniquindio.edu.co.model.GeneroPelicula;
+import co.edu.uniquindio.model.Cine;
+import co.edu.uniquindio.model.Pelicula;
+import co.edu.uniquindio.model.Sala;
+import co.edu.uniquindio.model.TipoSala;
+import co.edu.uniquindio.model.GeneroPelicula;
 
 public class MainRecord {
 
