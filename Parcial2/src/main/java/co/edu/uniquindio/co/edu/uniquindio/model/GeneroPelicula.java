@@ -1,4 +1,9 @@
-package co.edu.uniquindio.model;
+package uniquindio.edu.co.model;
 
 public enum GeneroPelicula {
+    ACCION,
+    COMEDIA,
+    DRAMA,
+    TERROR,
+    ANIMACION
 }
