@@ -1,4 +1,4 @@
 package co.edu.uniquindio.model;
 
-public enum Generopelicula {
+public enum GeneroPelicula {
 }
