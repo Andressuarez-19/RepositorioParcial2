@@ -268,8 +268,10 @@ public class Cine {
         int horas = Integer.parseInt(partes[0]);
         int minutos = Integer.parseInt(partes[1]);
 
-        return horas >= 0 && horas <= 23
+        boolean horaValida = horas >= 0 && horas <= 23
                 && minutos >= 0 && minutos <= 59;
+
+        return horaValida;
     }
 
     // VALIDAR FECHA
@@ -306,7 +308,9 @@ public class Cine {
             }
         }
 
-        return dia >= 1 && dia <= diasMes;
+        boolean fechaValida = dia >= 1 && dia <= diasMes;
+
+        return fechaValida;
     }
 
     // VERIFICAR DISPONIBILIDAD DE ASIENTOS
