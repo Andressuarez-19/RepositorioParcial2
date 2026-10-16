@@ -1,4 +1,9 @@
-package model;
+package co.edu.uniquindio.model;
+
+import co.edu.uniquindio.model.Pelicula;
+import co.edu.uniquindio.model.Sala;
+import co.edu.uniquindio.model.TipoSala;
+import co.edu.uniquindio.model.Venta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +19,7 @@ public class Funcion {
     private List<Venta> listVentas;
 
     public Funcion(String codigo, String fecha, String horaInicio,
-                   double precioBase, Pelicula pelicula, Sala sala) {
+                   double precioBase, co.edu.uniquindio.model.Pelicula pelicula, co.edu.uniquindio.model.Sala sala) {
 
         this.codigo = codigo;
         this.fecha = fecha;
@@ -75,7 +80,7 @@ public class Funcion {
 
             precio = precioBase + (precioBase * 30 / 100);
 
-        } else if (sala.getTipo() == TipoSala.TRES_D) {
+        } else if (sala.getTipo() == co.edu.uniquindio.model.TipoSala.TRES_D) {
 
             precio = precioBase + (precioBase * 20 / 100);
         }
@@ -87,7 +92,7 @@ public class Funcion {
 
         int cantidad = 0;
 
-        for (Venta venta : listVentas) {
+        for (co.edu.uniquindio.model.Venta venta : listVentas) {
             cantidad = cantidad + venta.getListBoletas().size();
         }
 
@@ -134,27 +139,27 @@ public class Funcion {
         this.precioBase = precioBase;
     }
 
-    public Pelicula getPelicula() {
+    public co.edu.uniquindio.model.Pelicula getPelicula() {
         return pelicula;
     }
 
-    public void setPelicula(Pelicula pelicula) {
+    public void setPelicula(co.edu.uniquindio.model.Pelicula pelicula) {
         this.pelicula = pelicula;
     }
 
-    public Sala getSala() {
+    public co.edu.uniquindio.model.Sala getSala() {
         return sala;
     }
 
-    public void setSala(Sala sala) {
+    public void setSala(co.edu.uniquindio.model.Sala sala) {
         this.sala = sala;
     }
 
-    public List<Venta> getListVentas() {
+    public List<co.edu.uniquindio.model.Venta> getListVentas() {
         return listVentas;
     }
 
-    public void setListVentas(List<Venta> listVentas) {
+    public void setListVentas(List<co.edu.uniquindio.model.Venta> listVentas) {
         this.listVentas = listVentas;
     }
 

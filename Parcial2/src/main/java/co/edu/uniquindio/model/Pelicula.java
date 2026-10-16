@@ -1,15 +1,15 @@
-package model;
+package co.edu.uniquindio.model;
 
 public class Pelicula {
 
     private String codigo;
     private String titulo;
     private int duracion;
-    private GeneroPelicula genero;
+    private co.edu.uniquindio.model.GeneroPelicula genero;
     private String clasificacionEdad;
 
     public Pelicula(String codigo, String titulo, int duracion,
-                    GeneroPelicula genero, String clasificacionEdad) {
+                    co.edu.uniquindio.model.GeneroPelicula genero, String clasificacionEdad) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.duracion = duracion;
@@ -41,11 +41,11 @@ public class Pelicula {
         this.duracion = duracion;
     }
 
-    public GeneroPelicula getGenero() {
+    public co.edu.uniquindio.model.GeneroPelicula getGenero() {
         return genero;
     }
 
-    public void setGenero(GeneroPelicula genero) {
+    public void setGenero(co.edu.uniquindio.model.GeneroPelicula genero) {
         this.genero = genero;
     }
 

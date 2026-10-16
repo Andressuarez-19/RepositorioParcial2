@@ -1,4 +1,7 @@
-package model;
+package co.edu.uniquindio.model;
+
+import co.edu.uniquindio.model.Funcion;
+import co.edu.uniquindio.model.Venta;
 
 public class Boleta {
 
@@ -10,7 +13,7 @@ public class Boleta {
     private Venta venta;
 
     public Boleta(String codigo, String fila, int numeroAsiento,
-                  Funcion funcion, Venta venta) {
+                  co.edu.uniquindio.model.Funcion funcion, co.edu.uniquindio.model.Venta venta) {
 
         this.codigo = codigo;
         this.fila = fila;
@@ -68,19 +71,19 @@ public class Boleta {
         this.valorPagado = valorPagado;
     }
 
-    public Funcion getFuncion() {
+    public co.edu.uniquindio.model.Funcion getFuncion() {
         return funcion;
     }
 
-    public void setFuncion(Funcion funcion) {
+    public void setFuncion(co.edu.uniquindio.model.Funcion funcion) {
         this.funcion = funcion;
     }
 
-    public Venta getVenta() {
+    public co.edu.uniquindio.model.Venta getVenta() {
         return venta;
     }
 
-    public void setVenta(Venta venta) {
+    public void setVenta(co.edu.uniquindio.model.Venta venta) {
         this.venta = venta;
     }
 

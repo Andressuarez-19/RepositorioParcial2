@@ -1,4 +1,6 @@
-package model;
+package co.edu.uniquindio.model;
+
+import co.edu.uniquindio.model.Persona;
 
 public class Cliente extends Persona {
 

@@ -1,4 +1,4 @@
-package model;
+package co.edu.uniquindio.model;
 
 import java.util.ArrayList;
 import java.util.List;

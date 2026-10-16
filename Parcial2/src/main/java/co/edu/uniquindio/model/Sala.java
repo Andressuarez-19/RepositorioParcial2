@@ -1,4 +1,6 @@
-package model;
+package co.edu.uniquindio.model;
+
+import co.edu.uniquindio.model.TipoSala;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +13,10 @@ public class Sala {
     private TipoSala tipo;
     private int filas;
     private int columnas;
-    private List<Asiento> listAsientos;
+    private List<co.edu.uniquindio.model.Asiento> listAsientos;
 
     public Sala(String codigo, String nombre, int capacidad,
-                TipoSala tipo, int filas, int columnas) {
+                co.edu.uniquindio.model.TipoSala tipo, int filas, int columnas) {
 
         this.codigo = codigo;
         this.nombre = nombre;
@@ -32,7 +34,7 @@ public class Sala {
             for (int j = 1; j <= columnas; j++) {
 
                 if (listAsientos.size() < capacidad) {
-                    Asiento asiento = new Asiento(letraFila, j);
+                    co.edu.uniquindio.model.Asiento asiento = new co.edu.uniquindio.model.Asiento(letraFila, j);
                     listAsientos.add(asiento);
                 }
             }
@@ -43,7 +45,7 @@ public class Sala {
 
         boolean encontrado = false;
 
-        for (Asiento asiento : listAsientos) {
+        for (co.edu.uniquindio.model.Asiento asiento : listAsientos) {
 
             if (asiento.getFila().equalsIgnoreCase(fila)
                     && asiento.getNumero() == numero) {
@@ -63,7 +65,7 @@ public class Sala {
 
         String resultado = "";
 
-        for (Asiento asiento : listAsientos) {
+        for (co.edu.uniquindio.model.Asiento asiento : listAsientos) {
             resultado += asiento.toString() + "\n";
         }
 
@@ -74,7 +76,7 @@ public class Sala {
 
         String resultado = "";
 
-        for (Asiento asiento : listAsientos) {
+        for (co.edu.uniquindio.model.Asiento asiento : listAsientos) {
             resultado += "[" + asiento.getFila()
                     + asiento.getNumero() + "] ";
 
@@ -110,11 +112,11 @@ public class Sala {
         this.capacidad = capacidad;
     }
 
-    public TipoSala getTipo() {
+    public co.edu.uniquindio.model.TipoSala getTipo() {
         return tipo;
     }
 
-    public void setTipo(TipoSala tipo) {
+    public void setTipo(co.edu.uniquindio.model.TipoSala tipo) {
         this.tipo = tipo;
     }
 
@@ -134,11 +136,11 @@ public class Sala {
         this.columnas = columnas;
     }
 
-    public List<Asiento> getListAsientos() {
+    public List<co.edu.uniquindio.model.Asiento> getListAsientos() {
         return listAsientos;
     }
 
-    public void setListAsientos(List<Asiento> listAsientos) {
+    public void setListAsientos(List<co.edu.uniquindio.model.Asiento> listAsientos) {
         this.listAsientos = listAsientos;
     }
 

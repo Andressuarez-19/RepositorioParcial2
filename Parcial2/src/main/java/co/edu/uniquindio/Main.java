@@ -1,6 +1,6 @@
 package co.edu.uniquindio;
 
-import uniquindio.edu.co.model.*;
+import co.edu.uniquindio.model.*;
 import javax.swing.JOptionPane;
 
 public class Main {

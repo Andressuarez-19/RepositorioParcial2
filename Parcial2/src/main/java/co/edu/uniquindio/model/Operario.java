@@ -1,4 +1,7 @@
-package model;
+package co.edu.uniquindio.model;
+
+import co.edu.uniquindio.model.Persona;
+import co.edu.uniquindio.model.Venta;
 
 public class Operario extends Persona {
 
@@ -17,7 +20,7 @@ public class Operario extends Persona {
         this.salarioBasico = salarioBasico;
     }
 
-    public void registrarVenta(Venta venta, Cine cine) {
+    public void registrarVenta(Venta venta, co.edu.uniquindio.model.Cine cine) {
         cine.getListVentas().add(venta);
     }
 

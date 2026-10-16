@@ -1,4 +1,4 @@
-package model;
+package co.edu.uniquindio.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ public class Cine {
     private List<Funcion> listFunciones;
     private List<Cliente> listClientes;
     private List<Operario> listOperarios;
-    private List<Venta> listVentas;
+    private List<co.edu.uniquindio.model.Venta> listVentas;
 
     public Cine(String nombre, String nit, String direccion) {
 
@@ -32,7 +32,7 @@ public class Cine {
 
     // REGISTRAR Y CONSULTAR PELICULAS
 
-    public boolean registrarPelicula(Pelicula pelicula) {
+    public boolean registrarPelicula(co.edu.uniquindio.model.Pelicula pelicula) {
 
         if (pelicula == null
                 || pelicula.getCodigo() == null
@@ -44,9 +44,9 @@ public class Cine {
         return true;
     }
 
-    public Pelicula consultarPelicula(String codigo) {
+    public co.edu.uniquindio.model.Pelicula consultarPelicula(String codigo) {
 
-        for (Pelicula pelicula : listPeliculas) {
+        for (co.edu.uniquindio.model.Pelicula pelicula : listPeliculas) {
 
             if (codigo != null
                     && pelicula.getCodigo().equalsIgnoreCase(codigo)) {
@@ -61,7 +61,7 @@ public class Cine {
 
         String resultado = "PELICULAS DISPONIBLES\n\n";
 
-        for (Pelicula pelicula : listPeliculas) {
+        for (co.edu.uniquindio.model.Pelicula pelicula : listPeliculas) {
             resultado += pelicula.toString() + "\n";
         }
 
@@ -74,7 +74,7 @@ public class Cine {
 
     // REGISTRAR Y CONSULTAR SALAS
 
-    public boolean registrarSala(Sala sala) {
+    public boolean registrarSala(co.edu.uniquindio.model.Sala sala) {
 
         if (sala == null
                 || sala.getCodigo() == null
@@ -88,9 +88,9 @@ public class Cine {
         return true;
     }
 
-    public Sala consultarSala(String codigo) {
+    public co.edu.uniquindio.model.Sala consultarSala(String codigo) {
 
-        for (Sala sala : listSalas) {
+        for (co.edu.uniquindio.model.Sala sala : listSalas) {
 
             if (codigo != null
                     && sala.getCodigo().equalsIgnoreCase(codigo)) {
@@ -105,7 +105,7 @@ public class Cine {
 
         String resultado = "SALAS REGISTRADAS\n\n";
 
-        for (Sala sala : listSalas) {
+        for (co.edu.uniquindio.model.Sala sala : listSalas) {
             resultado += sala.toString() + "\n";
         }
 
@@ -118,7 +118,7 @@ public class Cine {
 
     // REGISTRAR Y CONSULTAR CLIENTES
 
-    public boolean registrarCliente(Cliente cliente) {
+    public boolean registrarCliente(co.edu.uniquindio.model.Cliente cliente) {
 
         if (cliente == null
                 || cliente.getDocumentoIdentidad() == null
@@ -130,9 +130,9 @@ public class Cine {
         return true;
     }
 
-    public Cliente consultarCliente(String documentoIdentidad) {
+    public co.edu.uniquindio.model.Cliente consultarCliente(String documentoIdentidad) {
 
-        for (Cliente cliente : listClientes) {
+        for (co.edu.uniquindio.model.Cliente cliente : listClientes) {
 
             if (documentoIdentidad != null
                     && cliente.getDocumentoIdentidad()
@@ -146,7 +146,7 @@ public class Cine {
 
     // REGISTRAR Y CONSULTAR OPERARIOS
 
-    public boolean registrarOperario(Operario operario) {
+    public boolean registrarOperario(co.edu.uniquindio.model.Operario operario) {
 
         if (operario == null
                 || operario.getDocumentoIdentidad() == null
@@ -162,9 +162,9 @@ public class Cine {
         return true;
     }
 
-    public Operario consultarOperario(String documentoIdentidad) {
+    public co.edu.uniquindio.model.Operario consultarOperario(String documentoIdentidad) {
 
-        for (Operario operario : listOperarios) {
+        for (co.edu.uniquindio.model.Operario operario : listOperarios) {
 
             if (documentoIdentidad != null
                     && operario.getDocumentoIdentidad()
@@ -176,9 +176,9 @@ public class Cine {
         return null;
     }
 
-    public Operario consultarOperarioPorCodigo(String codigoEmpleado) {
+    public co.edu.uniquindio.model.Operario consultarOperarioPorCodigo(String codigoEmpleado) {
 
-        for (Operario operario : listOperarios) {
+        for (co.edu.uniquindio.model.Operario operario : listOperarios) {
 
             if (codigoEmpleado != null
                     && operario.getCodigoEmpleado()
@@ -192,7 +192,7 @@ public class Cine {
 
     // PROGRAMAR FUNCIONES
 
-    public boolean programarFuncion(Funcion funcion) {
+    public boolean programarFuncion(co.edu.uniquindio.model.Funcion funcion) {
 
         if (funcion == null
                 || funcion.getCodigo() == null
@@ -211,7 +211,7 @@ public class Cine {
 
         boolean disponible = true;
 
-        for (Funcion funcionRegistrada : listFunciones) {
+        for (co.edu.uniquindio.model.Funcion funcionRegistrada : listFunciones) {
 
             if (funcion.seCruzaConFuncion(funcionRegistrada)) {
                 disponible = false;
@@ -226,9 +226,9 @@ public class Cine {
         return false;
     }
 
-    public Funcion consultarFuncion(String codigo) {
+    public co.edu.uniquindio.model.Funcion consultarFuncion(String codigo) {
 
-        for (Funcion funcion : listFunciones) {
+        for (co.edu.uniquindio.model.Funcion funcion : listFunciones) {
 
             if (codigo != null
                     && funcion.getCodigo().equalsIgnoreCase(codigo)) {
@@ -243,7 +243,7 @@ public class Cine {
 
         String resultado = "FUNCIONES PROGRAMADAS\n\n";
 
-        for (Funcion funcion : listFunciones) {
+        for (co.edu.uniquindio.model.Funcion funcion : listFunciones) {
             resultado += funcion.toString() + "\n";
         }
 
@@ -312,7 +312,7 @@ public class Cine {
     // VERIFICAR DISPONIBILIDAD DE ASIENTOS
 
     public boolean verificarAsientoDisponible(
-            Funcion funcion, String fila, int numeroAsiento) {
+            co.edu.uniquindio.model.Funcion funcion, String fila, int numeroAsiento) {
 
         if (funcion == null
                 || funcion.getSala() == null
@@ -321,9 +321,9 @@ public class Cine {
             return false;
         }
 
-        for (Venta venta : listVentas) {
+        for (co.edu.uniquindio.model.Venta venta : listVentas) {
 
-            for (Boleta boleta : venta.getListBoletas()) {
+            for (co.edu.uniquindio.model.Boleta boleta : venta.getListBoletas()) {
 
                 if (boleta.getFuncion() != null
                         && boleta.getFuncion().getCodigo()
@@ -341,10 +341,10 @@ public class Cine {
     // VERIFICAR DISPONIBILIDAD DURANTE UNA VENTA
 
     public boolean verificarAsientoDisponible(
-            Funcion funcion,
+            co.edu.uniquindio.model.Funcion funcion,
             String fila,
             int numeroAsiento,
-            Venta ventaActual) {
+            co.edu.uniquindio.model.Venta ventaActual) {
 
         if (!verificarAsientoDisponible(
                 funcion, fila, numeroAsiento)) {
@@ -353,7 +353,7 @@ public class Cine {
 
         if (ventaActual != null) {
 
-            for (Boleta boleta : ventaActual.getListBoletas()) {
+            for (co.edu.uniquindio.model.Boleta boleta : ventaActual.getListBoletas()) {
 
                 if (boleta.getFuncion() != null
                         && boleta.getFuncion().getCodigo()
@@ -370,7 +370,7 @@ public class Cine {
 
     // MOSTRAR ASIENTOS DISPONIBLES Y OCUPADOS
 
-    public String consultarDisponibilidadAsientos(Funcion funcion) {
+    public String consultarDisponibilidadAsientos(co.edu.uniquindio.model.Funcion funcion) {
 
         if (funcion == null || funcion.getSala() == null) {
             return "La funcion o su sala no existen.";
@@ -386,7 +386,7 @@ public class Cine {
         int ocupados = 0;
         int columnas = funcion.getSala().getColumnas();
 
-        for (Asiento asiento : funcion.getSala().getListAsientos()) {
+        for (co.edu.uniquindio.model.Asiento asiento : funcion.getSala().getListAsientos()) {
 
             boolean disponible = verificarAsientoDisponible(
                     funcion, asiento.getFila(), asiento.getNumero());
@@ -417,7 +417,7 @@ public class Cine {
 
     // REGISTRAR VENTAS
 
-    public boolean realizarVenta(Venta venta) {
+    public boolean realizarVenta(co.edu.uniquindio.model.Venta venta) {
 
         if (venta == null
                 || venta.getCodigo() == null
@@ -436,7 +436,7 @@ public class Cine {
 
         for (int i = 0; i < venta.getListBoletas().size(); i++) {
 
-            Boleta boleta = venta.getListBoletas().get(i);
+            co.edu.uniquindio.model.Boleta boleta = venta.getListBoletas().get(i);
 
             if (boleta == null
                     || boleta.getFuncion() == null
@@ -455,7 +455,7 @@ public class Cine {
             for (int j = i + 1;
                  j < venta.getListBoletas().size(); j++) {
 
-                Boleta otraBoleta = venta.getListBoletas().get(j);
+                co.edu.uniquindio.model.Boleta otraBoleta = venta.getListBoletas().get(j);
 
                 if (otraBoleta.getFuncion() != null
                         && boleta.getFuncion().getCodigo()
@@ -474,9 +474,9 @@ public class Cine {
 
         listVentas.add(venta);
 
-        for (Boleta boleta : venta.getListBoletas()) {
+        for (co.edu.uniquindio.model.Boleta boleta : venta.getListBoletas()) {
 
-            Funcion funcion = boleta.getFuncion();
+            co.edu.uniquindio.model.Funcion funcion = boleta.getFuncion();
 
             if (!funcion.getListVentas().contains(venta)) {
                 funcion.getListVentas().add(venta);
@@ -486,9 +486,9 @@ public class Cine {
         return true;
     }
 
-    public Venta consultarVenta(String codigo) {
+    public co.edu.uniquindio.model.Venta consultarVenta(String codigo) {
 
-        for (Venta venta : listVentas) {
+        for (co.edu.uniquindio.model.Venta venta : listVentas) {
 
             if (codigo != null
                     && venta.getCodigo().equalsIgnoreCase(codigo)) {
@@ -503,7 +503,7 @@ public class Cine {
 
     public int consultarOcupacionSala(String codigoFuncion) {
 
-        Funcion funcion = consultarFuncion(codigoFuncion);
+        co.edu.uniquindio.model.Funcion funcion = consultarFuncion(codigoFuncion);
 
         if (funcion == null) {
             return 0;
@@ -511,9 +511,9 @@ public class Cine {
 
         int ocupados = 0;
 
-        for (Venta venta : listVentas) {
+        for (co.edu.uniquindio.model.Venta venta : listVentas) {
 
-            for (Boleta boleta : venta.getListBoletas()) {
+            for (co.edu.uniquindio.model.Boleta boleta : venta.getListBoletas()) {
 
                 if (boleta.getFuncion() != null
                         && boleta.getFuncion().getCodigo()
@@ -530,9 +530,9 @@ public class Cine {
 
         double totalIngresos = 0;
 
-        for (Venta venta : listVentas) {
+        for (co.edu.uniquindio.model.Venta venta : listVentas) {
 
-            for (Boleta boleta : venta.getListBoletas()) {
+            for (co.edu.uniquindio.model.Boleta boleta : venta.getListBoletas()) {
 
                 if (boleta.getFuncion() != null
                         && boleta.getFuncion().getCodigo()
@@ -576,51 +576,51 @@ public class Cine {
         this.direccion = direccion;
     }
 
-    public List<Pelicula> getListPeliculas() {
+    public List<co.edu.uniquindio.model.Pelicula> getListPeliculas() {
         return listPeliculas;
     }
 
-    public void setListPeliculas(List<Pelicula> listPeliculas) {
+    public void setListPeliculas(List<co.edu.uniquindio.model.Pelicula> listPeliculas) {
         this.listPeliculas = listPeliculas;
     }
 
-    public List<Sala> getListSalas() {
+    public List<co.edu.uniquindio.model.Sala> getListSalas() {
         return listSalas;
     }
 
-    public void setListSalas(List<Sala> listSalas) {
+    public void setListSalas(List<co.edu.uniquindio.model.Sala> listSalas) {
         this.listSalas = listSalas;
     }
 
-    public List<Funcion> getListFunciones() {
+    public List<co.edu.uniquindio.model.Funcion> getListFunciones() {
         return listFunciones;
     }
 
-    public void setListFunciones(List<Funcion> listFunciones) {
+    public void setListFunciones(List<co.edu.uniquindio.model.Funcion> listFunciones) {
         this.listFunciones = listFunciones;
     }
 
-    public List<Cliente> getListClientes() {
+    public List<co.edu.uniquindio.model.Cliente> getListClientes() {
         return listClientes;
     }
 
-    public void setListClientes(List<Cliente> listClientes) {
+    public void setListClientes(List<co.edu.uniquindio.model.Cliente> listClientes) {
         this.listClientes = listClientes;
     }
 
-    public List<Operario> getListOperarios() {
+    public List<co.edu.uniquindio.model.Operario> getListOperarios() {
         return listOperarios;
     }
 
-    public void setListOperarios(List<Operario> listOperarios) {
+    public void setListOperarios(List<co.edu.uniquindio.model.Operario> listOperarios) {
         this.listOperarios = listOperarios;
     }
 
-    public List<Venta> getListVentas() {
+    public List<co.edu.uniquindio.model.Venta> getListVentas() {
         return listVentas;
     }
 
-    public void setListVentas(List<Venta> listVentas) {
+    public void setListVentas(List<co.edu.uniquindio.model.Venta> listVentas) {
         this.listVentas = listVentas;
     }
 
